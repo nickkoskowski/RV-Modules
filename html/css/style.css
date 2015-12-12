@@ -1,0 +1,56 @@
+img {max-width: 100%;}
+a {color:#006F53;}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight:bold;
+}
+
+nav ul {margin:0px; padding:0px; list-style:none;}
+nav ul li {display:inline-block; vertical-align:top;}
+
+
+header #nav {background-color:#006F53; padding:0 25px; color:white;}
+header #nav a {color:white;}
+header #nav p {vertical-align:middle; padding-top:10px;}
+header nav ul li {padding:10px 20px; font-size:18px; font-weight:bold;}
+header nav ul li:last-of-type {padding-right:0px;}
+
+footer {background-color:#006F53; color:#fff; padding:15px 0px; margin-top:25px;}
+footer p {padding:0px; margin:0px;}
+
+#logos {padding:15px 0px; background-color:#FBFBFB;}
+#logos img {max-height:80px;}
+
+
+#breadcrumbs {font-weight:100; font-family:'Lato', sans-serif; padding:15px 0px; font-size:18px;}
+
+#content button {font-size:18px; font-weight:bold; background-color:#006F53; color:white; padding:10px 25px; border:none;}
+
+#inventory h2 {margin-bottom:25px;}
+#inventory .model {text-align:center;}
+#inventory .model h3 {font-weight:100;}
+#inventory .model button {font-size:14px; font-weight:bold; background-color:#006F53; color:white; padding:10px 25px; border:none; margin-top:10px; margin-right:10px; display:inline-block;}
+
+
+
+.modelNumber {padding-top:20px;}
+
+.callback-cta {background-color:#FBFBFB; padding:15px; border:1px solid #eee;}
+.callback-cta input[type=text] {padding:10px;}
+.callback-cta input[type=text]:first-of-type {margin-right:15px;}
+.callback-cta button {margin-top:15px;}
+
+
+
+#vidModal .modal-dialog {
+	width: 80%;
+	height: 90%;
+	padding: 0;
+}
+
+#vidModal .modal-content {
+	height: 90%;
+	border-radius: 0;
+	text-align:center;
+}
