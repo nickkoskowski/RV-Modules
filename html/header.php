@@ -13,7 +13,7 @@
 		<header>
 			<div id="nav" class="row">
 				<div class="col-md-6">
-					<p><strong>(XXX)-XXX-XXXX</strong></p>
+					<p><strong>(XXX)-XXX-XXXX</strong> <button data-toggle="modal" data-target="#contactModal">Contact Us</button></p>
 				</div>
 				<div class="col-md-6 text-right">
 					<nav>
