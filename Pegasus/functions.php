@@ -20,6 +20,7 @@ function resources() {
 	//Scripts
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.js', array('jquery'));
+	wp_enqueue_script( 'zoom', get_template_directory_uri() . '/js/zoom.js', array('jquery'));
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'resources' );

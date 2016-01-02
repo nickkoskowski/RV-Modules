@@ -1,6 +1,5 @@
-<?php include 'header.php'; ?>
+<?php get_header(); ?>
 <main>
-	<?php include '/modules/logos.php'; ?>
 	<div class="container">
 		<div id="breadcrumbs">
 			<div class="row">
@@ -11,32 +10,18 @@
 		</div>
 		<div id="brands">
 			<div class="row">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/encounter.png"></a>
-					<h4><a href="index.php">Encounter</a></h4>
+					<a href="<?php the_permalink(); ?>">
+						<?php if ( has_post_thumbnail() ) {
+							the_post_thumbnail();
+						}  ?>
+					</a>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				</div>
-				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/Crosscountry.jpg"></a>
-					<h4><a href="index.php">Cross-Country</a></h4>
-				</div>
-				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/Adrenaline.jpg"></a>
-					<h4><a href="index.php">Adrenaline</a></h4>
-				</div>
-				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/mirada.jpg"></a>
-					<h4><a href="index.php">Mirada</a></h4>
-				</div>
-				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/pursuit.jpg"></a>
-					<h4><a href="index.php">Pursuit</a></h4>
-				</div>
-				<div class="col-xs-6 col-md-4 text-center">
-					<a href="index.php"><img src="images/models/Coachmen/concord.jpg"></a>
-					<h4><a href="index.php">Concord</a></h4>
-				</div>
-			</div>
+			<?php endwhile; endif; ?>
 		</div>
 	</div>
+</div>
 </main>
-<?php include 'footer.php'; ?>
+<?php get_footer(); ?>
