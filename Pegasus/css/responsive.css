@@ -16,6 +16,15 @@
     text-align: center; }
 
   #logos {
-    text-align: center; } }
+    text-align: center; } 
+  }
+
+@media (max-width: 560px) {
+    .mobile-only {display: block;}
+    #inventory .model button {display: none;}
+    .ph-number {font-size:10px;}
+    #logos {display:none;}
+    #breadcrumbs {text-align:left;}
+    }
 
 /*# sourceMappingURL=responsive.css.map */
