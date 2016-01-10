@@ -1,23 +1,37 @@
 <?php /* Template Name: Brands Page */ ?>
 <?php get_header(); ?>
 <main>
-	<div id="logos">
-		<div class="container">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<div class="row">
-				<div class="col-md-6 col-xs-12">
-					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png">
-				</div>
-				<div class="col-md-6 col-xs-12 text-right">
-					<div id="breadcrumbs">
-						<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Brands</a></p>
-					</div>
-				</div>
+<div class="container brands-page">
+	<h4 class="text-center">Filter by Type</h4>
+	<div id="types">
+		<div class="row">
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/class-a-icon.png">
+				<p>Class A</p>
 			</div>
-		<?php endwhile; endif; ?>
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/class-b-icon.png">
+				<p>Class B</p>
+			</div>
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/class-c-icon.png">
+				<p>Class C</p>
+			</div>
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/travel-trailer-icon.png">
+				<p>Travel Trailer</p>
+			</div>
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/5thwheel-icon.png">
+				<p>5th Wheel</p>
+			</div>
+			<div class="col-md-2 col-xs-4 type">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/tent-trailer-icon.png">
+				<p>Tent Trailer</p>
+			</div>
+		</div>
 	</div>
-</div>
-<div class="container">
+	<h4 class="text-center">Filter by Brand</h4>
 	<div id="brands">
 		<div class="row">
 			<?php $brands = get_terms( 'brands', array('orderby' => 'count','hide_empty' => 0) );

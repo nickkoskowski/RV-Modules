@@ -3,6 +3,7 @@
 include 'acf/acf-settings.php';
 
 add_theme_support('post-thumbnails');
+add_theme_support('menus');
 
 function resources() {
 	//Stylesheets
@@ -55,6 +56,15 @@ function RV_tax() {
 			'hierarchical' => true,
 			)
 		);
+	register_taxonomy(
+		'type',
+		'models',
+		array(
+			'label' => __( 'Type' ),
+			'rewrite' => array( 'slug' => 'type' ),
+			'hierarchical' => true,
+			)
+		);
 }
 
 add_action('init', 'RV_tax');
@@ -64,5 +74,9 @@ function get_brand($postID) {
 	$brandlist =  wp_get_post_terms($postID, 'brands');
 	return $brandlist[0];
 }
+
+register_nav_menus( array(
+'Header_Nav' => 'Header Navigation Area',
+) );
 
 ?>

@@ -1,45 +1,24 @@
 <?php get_header(); ?>
 <main>
-	<div id="logos">
-		<div class="container">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<div class="container">
+		<?php $floorplans = get_field('floorplans'); ?>
+		<div id="breadcrumbs">
 			<div class="row">
-				<div class="col-md-4 col-xs-6">
-					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png">
+				<div class="col-md-12">
+					<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Brands</a> / <a href=""><?php echo get_brand(get_the_id())->name; ?></a> / <?php the_title(); ?></p>
 				</div>
-				<div class="col-md-4 col-xs-6 text-center">
-					<?php 
-					$terms = get_the_terms(get_the_ID(), 'brands');
-					if (is_array($terms)) {
-						$term = array_pop($terms);
-						echo '<img src="'.get_field('logo', $term).'">'; 
-					}
-					?>
-				</div>
-				<div class="col-md-4 col-xs-12 text-center">
-					<h4 class="modelNumber"><?php if (!is_home()) { echo 'Model: '.get_the_title(); } ?></h4>
-				</div>
-			</div>
-	</div>
-</div>
-<div class="container">
-	<?php $floorplans = get_field('floorplans'); ?>
-	<div id="breadcrumbs">
-		<div class="row">
-			<div class="col-md-12">
-				<p><a href="">Home</a> / <a href="<?php echo get_site_url(); ?>/brands">Brands</a> / <a href=""><?php echo get_brand(get_the_id())->name; ?></a> > <?php the_title(); ?></p>
 			</div>
 		</div>
-	</div>
-	<div id="content">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="videoWrapper">
-					<iframe id="modelVid" src="<?php echo $floorplans[0]['floorplan_video']; ?>" frameborder="0" allowfullscreen></iframe>
+		<div id="content">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="videoWrapper">
+						<iframe id="modelVid" src="<?php echo $floorplans[0]['floorplan_video']; ?>" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6 text-center">
-				<img id="floorplan-image" src="<?php echo $floorplans[0]['floorplan_image']; ?>" data-zoom-image="<?php echo $floorplans[0]['floorplan_image']; ?>">
+				<div class="col-md-6 text-center">
+					<img id="floorplan-image" src="<?php echo $floorplans[0]['floorplan_image']; ?>" data-zoom-image="<?php echo $floorplans[0]['floorplan_image']; ?>">
 				<!--<form class="callback-cta">
 					<input type="text" placeholder="Your Name">
 					<input type="text" placeholder="Phone Number">

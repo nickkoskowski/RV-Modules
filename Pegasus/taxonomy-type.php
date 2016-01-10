@@ -4,7 +4,7 @@
 		<div id="breadcrumbs">
 			<div class="row">
 				<div class="col-md-12">
-					<p><a href="">Home</a> / <a href="">Brands</a> / <a href=""><?php echo $wp_query->query_vars['taxonomy_name']; ?></a></p>
+					<p><a href="">Home</a> / <a href=""><?php echo $wp_query->query_vars['taxonomy_name']; ?></a></p>
 				</div>
 			</div>
 		</div>

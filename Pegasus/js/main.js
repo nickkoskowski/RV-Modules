@@ -1,5 +1,10 @@
 jQuery(document).ready(function(){
 
+	jQuery('.type').click(function(){
+		jQuery('.type').removeClass('active');
+		jQuery(this).addClass('active');
+	});
+
 	jQuery("#floorplan-image").elevateZoom({zoomType: "lens", lensShape : "round", lensSize : 300});
 
 
